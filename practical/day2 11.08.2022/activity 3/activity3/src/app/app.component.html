@@ -1,0 +1,22 @@
+<table id="studentTable" border = "1" cellpadding="0" cellspacing="0" width="500">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>NIC</th>
+      <th>GENDER</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- employees:Employee -->
+    <tr *ngFor="let employe of employees">
+      <td>{{employe.id}}</td>
+      <td>{{employe.name}}</td>
+      <td>{{employe.birthday}}</td>
+      <td>{{employe.nic}}</td>
+      <td>{{employe.gender}}</td>
+
+    </tr>
+  </tbody>
+</table>

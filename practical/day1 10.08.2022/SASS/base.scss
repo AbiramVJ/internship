@@ -1,0 +1,9 @@
+$font-list: Helvetica, sans-serif, arial;
+$primary-color:rgb(109, 41, 41);
+$danger-color:red;
+$info-color:rgp(0,0,200);
+
+body{
+    font-family: $font-list;
+    color: $primary-color;
+}

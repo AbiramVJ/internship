@@ -1,0 +1,33 @@
+<div class="form"><form [formGroup]="customersForm">
+<label>ID: </label> <input type="text" formControlName="id"><br><br>
+<label>name: </label> <input type="text" formControlName="name"><br><br>
+<label>city: </label> <input type="text" formControlName="city"><br><br>
+<label>age: </label> <input type="text" formControlName="age"><br><br>
+
+<button class="btn" (click)="addItem()">Add</button>
+<button class="btn"(click)="reset()">reset</button>
+</form>
+</div>
+<br>
+
+<table id = "studentTable" border="1" cellpadding="1" cellspacing="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of listData">
+      <td>{{items.id}}</td>
+      <td>{{items.name}}</td>
+      <td>{{items.city}}</td>
+      <td>{{items.age}}</td>
+      <td><button class="btn" (click)="removeItems(items) ">Remove</button> <button class="btn"(click)="update(items.id)">edit</button></td>
+
+
+    </tr>
+  </tbody>
+</table>

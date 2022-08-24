@@ -1,0 +1,76 @@
+$font-list: Helvetica, sans-serif, arial;
+$primary-color:#333;
+$danger-color:red;
+$info-color:rgp(0,0,200);
+
+@use 'base';
+
+body{
+    font-family: $font-list;
+    color: $primary-color;
+}
+
+
+#navbar{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            display: inline-block;
+        }
+        a{
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+            color:base.$primary-color;
+        }
+    }
+}
+
+// button
+// passing the color as a parameter
+
+@mixin buttonStyle($color) {
+    background-color: $color;
+    width: 80px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid base.$primary-color;
+}
+
+span[id ="formbutton"]{
+    input[type='button']{
+        @include buttonStyle(green)
+    }
+    input[type='reset']{
+        @include buttonStyle(base.$danger-color)
+    }
+
+    
+}
+
+// form
+//adding another felid
+
+%fromFieldStyle{
+    width: 200px;
+    height: 28px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+form{
+
+    input[type="text"]{
+        @extend %fromFieldStyle;
+        border-color: base.$primary-color;
+    }
+    input[type="password"]{
+        @extend %fromFieldStyle;
+        border-color: base.$primary-color;
+    }
+}

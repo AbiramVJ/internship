@@ -1,0 +1,38 @@
+<label>Value 1 :</label>
+<input type="text" [formControl]= "value1"/>
+<br/><br/>
+
+<label>Value 2 :</label>
+<input type="text" [formControl]= "value2"/>
+<br/><br/>
+
+<label>Answer :</label>
+<input type="text" [formControl]= "answer"/>
+<br/><br/>
+
+<button (click)="sum()">sum</button>
+<button (click)="sub()">sub</button>
+<button (click)="mul()">mul</button>
+<button (click)="div()">Div</button>
+
+<hr> <br>
+
+<table id="studentTable" border = "1" cellpadding="0" cellspacing="1" width="500">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.city}}</td>
+      <td>{{student.mobile}}</td>
+
+    </tr>
+  </tbody>
+</table>

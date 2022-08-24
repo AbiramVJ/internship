@@ -1,0 +1,55 @@
+<div class="bg-denger bg-primary p-1 m-1">
+  <p class="text-center m-3 text-light font-weight-bold">Specific Employee-details</p>
+</div>
+<br />
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div
+        class="card mb-3 shadow-sm"
+        style="max-width: 540px"
+        *ngFor="let emp of semb"
+      >
+        <div class="row g-0">
+          <div class="col-md-4 ">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/004/773/704/original/a-girl-s-face-with-a-beautiful-smile-a-female-avatar-for-a-website-and-social-network-vector.jpg"
+              alt="Trendy Pants and Shoes"
+              class="img-fluid rounded-start p-1"
+              *ngIf="emp?.gender?.name == 'Female'"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027366_960_720.png"
+              alt="Trendy Pants and Shoes"
+              class="img-fluid rounded-start"
+              *ngIf="emp?.gender?.name == 'Male'"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="m-2 p-2">
+                  <P class="card-title"> NAME :</P>
+                  <p class="card-text">ID :</p>
+                  <p class="card-text">AGE :</p>
+                  <p class="card-text">NIC :</p>
+                  <p class="card-text">GENDER:</p>
+                </div>
+                <div class="m-2 p-2">
+                  <P class="card-title"> {{ emp?.name }}</P>
+                  <p class="card-text">{{ emp?.id }}</p>
+                  <p class="card-text">{{ emp?.age }}</p>
+                  <p class="card-text">{{ emp?.nic }}</p>
+                  <p class="card-text">{{ emp?.gender?.name }}</p>
+                </div>
+              </div>
+              <div><button class="btn btn-danger bg-denger">Click More Details</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

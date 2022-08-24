@@ -1,0 +1,58 @@
+body {
+  font-family: Helvetica, sans-serif, arial;
+  color: rgb(109, 41, 41);
+}
+
+body {
+  font-family: Helvetica, sans-serif, arial;
+  color: #333;
+}
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#navbar ul li {
+  display: inline-block;
+}
+#navbar ul a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: rgb(109, 41, 41);
+}
+
+span[id=formbutton] input[type=button] {
+  background-color: green;
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(109, 41, 41);
+}
+span[id=formbutton] input[type=reset] {
+  background-color: red;
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(109, 41, 41);
+}
+
+form input[type=password], form input[type=text] {
+  width: 200px;
+  height: 28px;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+form input[type=text] {
+  border-color: rgb(109, 41, 41);
+}
+form input[type=password] {
+  border-color: rgb(109, 41, 41);
+}
+
+/*# sourceMappingURL=style.css.map */

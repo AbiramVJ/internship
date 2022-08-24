@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/employees">Employee Form</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/employees">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="employees/add">Add</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+  <header class="row">
+    <div class="col-lg-6">
+      <h1>All Employees</h1>
+    </div>
+    <div class="col-lg-6 text-right">
+      <ol class="breadcrumb float-right bg-transparent">
+        <li class="breadcrumb-item">Employee</li>
+        <li class="breadcrumb-item " aria-current="page" routerLink="/employees"><a href="/employees/details">All Employee</a> </li>
+      </ol>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-lg-2"></aside>
+      <section class="col-lg-10">
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
